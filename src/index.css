@@ -1,3 +1,60 @@
+@import '@fontsource-variable/montserrat';
+
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
+
+@layer base {
+  html {
+    scroll-behavior: smooth;
+    scroll-padding-top: 5rem;
+  }
+  body {
+    @apply bg-white font-sans text-slate-800 antialiased;
+  }
+}
+
+@layer components {
+  /* Faixa de destaque atrás de uma palavra, como nas artes do Instagram */
+  .mark {
+    @apply bg-brand-500 px-2 text-white;
+    box-decoration-break: clone;
+    -webkit-box-decoration-break: clone;
+  }
+  .eyebrow {
+    @apply text-xs font-bold uppercase tracking-[0.2em] text-brand-500;
+  }
+  .btn {
+    @apply inline-flex items-center justify-center gap-2 rounded-full px-6 py-3.5 text-sm font-bold transition-colors focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-brand-400;
+  }
+  .btn-primary {
+    @apply btn bg-brand-500 text-white hover:bg-brand-600;
+  }
+  .btn-ghost {
+    @apply btn border border-white/40 text-white hover:bg-white hover:text-brand-900;
+  }
+  .no-scrollbar {
+    scrollbar-width: none;
+  }
+  .no-scrollbar::-webkit-scrollbar {
+    display: none;
+  }
+  /* O embed do Instagram vem limitado a 540px; aqui ele ocupa a coluna inteira */
+  .ig-embed .instagram-media {
+    @apply overflow-hidden rounded-2xl bg-white shadow-xl ring-1 ring-slate-200/70;
+    width: 100% !important;
+    max-width: 100% !important;
+    min-width: 0 !important;
+    margin: 0 !important;
+    border: 0 !important;
+  }
+  .logo-white {
+    filter: brightness(0) invert(1);
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  html {
+    scroll-behavior: auto;
+  }
+}

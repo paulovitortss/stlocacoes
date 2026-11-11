@@ -4,7 +4,7 @@ const PILLARS = [
   { icon: Truck, title: 'Logística própria', text: 'Levamos o equipamento até a sua obra com frota própria de transporte.' },
   { icon: HardHat, title: 'Equipe qualificada', text: 'Operadores experientes para manter a obra produtiva e segura.' },
   { icon: Wrench, title: 'Suporte técnico', text: 'Manutenção e atendimento rápido para evitar máquina parada.' },
-  { icon: MapPin, title: 'Todo o Piauí', text: 'Base em Teresina e atendimento em obras de todo o estado.' },
+  { icon: MapPin, title: 'Piauí e Maranhão', text: 'Base em Teresina e atendimento em obras nos dois estados.' },
 ];
 
 const AREAS = ['Infraestrutura', 'Terraplenagem', 'Pavimentação', 'Mineração'];

@@ -8,7 +8,7 @@ export default function Footer() {
         <div className="md:col-span-2">
           <img src="/media/logo.png" alt="ST Locações" width={272} height={54} className="logo-white h-9 w-auto" />
           <p className="mt-4 max-w-sm text-sm leading-relaxed">
-            Locação de máquinas pesadas de linha amarela e caminhões para obras de infraestrutura em todo o Piauí.
+            Locação de máquinas pesadas de linha amarela e caminhões para obras de infraestrutura no Piauí e no Maranhão.
           </p>
           <a href={whatsappLink()} target="_blank" rel="noopener noreferrer" className="btn-primary mt-6">
             <WhatsAppIcon className="h-4 w-4" />

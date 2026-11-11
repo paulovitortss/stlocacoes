@@ -1,12 +1,12 @@
 import { useState } from 'react';
 import { ArrowUpRight, Plus } from 'lucide-react';
-import { ALSO_AVAILABLE, EQUIPMENT, whatsappLink, type Category } from '../config';
+import { ALSO_AVAILABLE, CATEGORIES, EQUIPMENT, whatsappLink, type Category } from '../config';
 
-const FILTERS: (Category | 'Todos')[] = ['Todos', 'Terraplenagem', 'Transporte', 'Pavimentação'];
+const FILTERS: (Category | 'Todos')[] = ['Todos', ...CATEGORIES];
 
 export default function Equipment() {
   const [filter, setFilter] = useState<(typeof FILTERS)[number]>('Todos');
-  const items = filter === 'Todos' ? EQUIPMENT : EQUIPMENT.filter((e) => e.category === filter);
+  const items = filter === 'Todos' ? EQUIPMENT : EQUIPMENT.filter((e) => e.categories.includes(filter));
 
   return (
     <section id="equipamentos" className="bg-slate-50 py-20 sm:py-28">
@@ -51,11 +51,16 @@ export default function Equipment() {
                   src={e.image}
                   alt={e.name}
                   loading="lazy"
+                  style={{ objectPosition: e.position }}
                   className="h-full w-full object-cover transition duration-500 group-hover:scale-105"
                 />
-                <span className="absolute left-3 top-3 rounded-full bg-white/90 px-3 py-1 text-[11px] font-bold uppercase tracking-wider text-brand-800 backdrop-blur">
-                  {e.category}
-                </span>
+                <div className="absolute left-3 top-3 flex flex-wrap gap-1.5">
+                  {e.categories.map((c) => (
+                    <span key={c} className="rounded-full bg-white/90 px-3 py-1 text-[11px] font-bold uppercase tracking-wider text-brand-800 backdrop-blur">
+                      {c}
+                    </span>
+                  ))}
+                </div>
               </div>
               <div className="flex flex-1 flex-col p-5">
                 <h3 className="text-lg font-bold text-brand-950">{e.name}</h3>
@@ -76,7 +81,7 @@ export default function Equipment() {
         </div>
 
         <div className="mt-10 flex flex-wrap items-center gap-3 text-sm">
-          <span className="font-semibold text-slate-500">Também disponíveis:</span>
+          <span className="font-semibold text-slate-500">{ALSO_AVAILABLE.length > 1 ? 'Também disponíveis:' : 'Também disponível:'}</span>
           {ALSO_AVAILABLE.map((name) => (
             <span key={name} className="inline-flex items-center gap-1.5 rounded-full bg-white px-3 py-1.5 font-semibold text-slate-700 ring-1 ring-slate-200">
               <Plus className="h-3.5 w-3.5 text-brand-500" />

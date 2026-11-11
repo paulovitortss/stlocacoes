@@ -30,7 +30,7 @@ export default function Hero() {
       <div className="mx-auto w-full max-w-7xl px-4 pb-16 pt-32 sm:px-6 sm:pb-20 lg:px-8">
         <p className="mb-5 inline-flex items-center gap-2 rounded-full border border-white/20 bg-white/10 px-4 py-1.5 text-xs font-semibold uppercase tracking-[0.18em] backdrop-blur">
           <span className="h-1.5 w-1.5 rounded-full bg-brand-300" />
-          Locação de máquinas pesadas · Piauí
+          Locação de máquinas pesadas · Piauí e Maranhão
         </p>
 
         <h1 className="max-w-4xl text-4xl font-extrabold leading-[1.08] tracking-tight sm:text-6xl lg:text-7xl">
@@ -38,8 +38,8 @@ export default function Hero() {
         </h1>
 
         <p className="mt-6 max-w-2xl text-lg text-white/85 sm:text-xl">
-          Escavadeiras, patrol, trator de esteira, rolos, vibroacabadora e caminhões basculantes e pipa para terraplenagem,
-          pavimentação e infraestrutura.
+          Escavadeiras, retroescavadeiras, patrol, tratores, rolos, vibroacabadora e caminhões basculante, pipa e espargidor
+          para terraplenagem, pavimentação e infraestrutura.
         </p>
 
         <div className="mt-10 flex flex-col gap-3 sm:flex-row">
@@ -57,7 +57,7 @@ export default function Hero() {
           {[
             ['Frota própria', 'máquinas e caminhões'],
             ['Equipe técnica', 'operadores qualificados'],
-            ['Todo o Piauí', 'base em Teresina'],
+            ['Piauí e Maranhão', 'base em Teresina'],
             [CONTACT.phoneLabel, 'WhatsApp'],
           ].map(([a, b]) => (
             <div key={a}>

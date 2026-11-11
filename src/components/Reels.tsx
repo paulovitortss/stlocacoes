@@ -55,7 +55,7 @@ export default function Reels() {
             <p className="eyebrow text-brand-300">Na obra</p>
             <h2 className="mt-3 text-3xl font-extrabold tracking-tight sm:text-5xl">Nossa frota trabalhando de verdade.</h2>
             <p className="mt-4 text-lg text-white/70">
-              Máquinas e caminhões da ST em operação no Piauí. Toque para assistir com som.
+              Máquinas e caminhões da ST em operação no Piauí e no Maranhão. Toque para assistir com som.
             </p>
           </div>
           <a href={instagramLink} target="_blank" rel="noopener noreferrer" className="btn-ghost shrink-0">

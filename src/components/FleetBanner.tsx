@@ -14,7 +14,7 @@ export default function FleetBanner() {
 
       <div className="mx-auto grid max-w-7xl gap-10 px-4 py-20 sm:px-6 sm:py-28 lg:grid-cols-2 lg:px-8">
         <div>
-          <p className="eyebrow text-brand-300">Transporte</p>
+          <p className="eyebrow text-brand-300">Transporte de materiais</p>
           <h2 className="mt-3 text-3xl font-extrabold leading-tight tracking-tight sm:text-5xl">
             Sua obra <span className="mark">precisa</span> de caminhões basculantes?
           </h2>

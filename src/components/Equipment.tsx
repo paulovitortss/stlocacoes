@@ -80,15 +80,17 @@ export default function Equipment() {
           ))}
         </div>
 
-        <div className="mt-10 flex flex-wrap items-center gap-3 text-sm">
-          <span className="font-semibold text-slate-500">{ALSO_AVAILABLE.length > 1 ? 'Também disponíveis:' : 'Também disponível:'}</span>
-          {ALSO_AVAILABLE.map((name) => (
-            <span key={name} className="inline-flex items-center gap-1.5 rounded-full bg-white px-3 py-1.5 font-semibold text-slate-700 ring-1 ring-slate-200">
-              <Plus className="h-3.5 w-3.5 text-brand-500" />
-              {name}
-            </span>
-          ))}
-        </div>
+        {ALSO_AVAILABLE.length > 0 && (
+          <div className="mt-10 flex flex-wrap items-center gap-3 text-sm">
+            <span className="font-semibold text-slate-500">{ALSO_AVAILABLE.length > 1 ? 'Também disponíveis:' : 'Também disponível:'}</span>
+            {ALSO_AVAILABLE.map((name) => (
+              <span key={name} className="inline-flex items-center gap-1.5 rounded-full bg-white px-3 py-1.5 font-semibold text-slate-700 ring-1 ring-slate-200">
+                <Plus className="h-3.5 w-3.5 text-brand-500" />
+                {name}
+              </span>
+            ))}
+          </div>
+        )}
       </div>
     </section>
   );

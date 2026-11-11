@@ -49,7 +49,8 @@ export const EQUIPMENT: Equipment[] = [
   {
     name: 'Motoniveladora (patrol)',
     categories: ['Terraplenagem'],
-    image: '/media/eq-patrol.jpg',
+    image: '/media/eq-patrol.webp',
+    position: 'center 60%',
     pitch: 'Terreno irregular? A patrol coloca sua obra no nível.',
     description: 'Nivelamento, regularização do solo e abertura de vias com mais precisão e produtividade.',
   },
@@ -128,7 +129,8 @@ export const EQUIPMENT: Equipment[] = [
   },
 ];
 
-export const ALSO_AVAILABLE = ['Pá carregadeira'];
+// Equipamentos sem card próprio, listados como "Também disponível" (vazio = a faixa não aparece).
+export const ALSO_AVAILABLE: string[] = [];
 
 export interface Reel {
   title: string;
